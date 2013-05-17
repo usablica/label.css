@@ -1,9 +1,9 @@
 # label.css
-=========
+
 > Just a simply easy way to label each element you want!
 
 ## How To Use
-=========
+
 You can use label.css in your site in just few steps:
 
 **1)** Include `label.css` in your web page. you can use min version for production. <br/>
@@ -18,13 +18,13 @@ For example:
 ```
 
 ## Positions
-=========
+
 Label.css supports both `outside` and `inside` positions as the label place. Use the class `outside` to put the label outside of the element and `inside` to put it inside.
 Outside label can goes to `top` or `bottom`.
 Inside mode supports these positions: `top`, `bottom`, `middle`, `left` and `right` just adding class with the same class name.
 
 ## Effects
-=========
+
 You can add hover effects to your label! Two effects `fade` and `float` are available. more effects can be added by you and your creativity!
 
 For example:
@@ -33,7 +33,7 @@ For example:
 ```
 
 ## Author 
-=========
+
 **Hosein Emrani**
 <br/>
 - [Twitter](http://twitter.com/hoseiin)
@@ -41,7 +41,7 @@ For example:
 - [Blog](http://ehosein.com)
 
 ## License 
-=========
+
 
 Copyright (c) 2013 - Hosein Emrani (hoseiin@outlook.com)
 
