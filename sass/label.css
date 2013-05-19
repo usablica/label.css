@@ -1,0 +1,57 @@
+/*
+Syntax error: File to import not found or unreadable: compass/css3.
+              Load path: C:/Users/Sean/Documents/GitHub/label.css/sass
+        on line 14 of label.scss
+
+9: 	=============================================================================
+10: 	Filename:  label.less
+11: 	=============================================================================
+12: 	Has label SASS helper mixins
+13: --------------------------------------------------------------------------------------------------------------------- */
+14: @import "compass/css3";
+15: 
+16: /* =============================================================================
+17: Sitewide variables
+18: ========================================================================== */
+19: $labelPadding: 1%;
+
+Backtrace:
+label.scss:14
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/import_node.rb:45:in `import'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:7:in `visit'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/root_node.rb:20:in `render'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:315:in `_render'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:262:in `render'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:201:in `each'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin.rb:81:in `update_stylesheets'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/exec.rb:432:in `watch_or_update'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/exec.rb:315:in `process_result'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/exec.rb:41:in `parse'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/exec.rb:21:in `parse!'
+C:/ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.9/bin/scss:9:in `<top (required)>'
+C:/ruby193/bin/scss:23:in `load'
+C:/ruby193/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: compass/css3.\A               Load path: C:/Users/Sean/Documents/GitHub/label.css/sass\A         on line 14 of label.scss\A \A 9: 	=============================================================================\A 10: 	Filename:  label.less\A 11: 	=============================================================================\A 12: 	Has label SASS helper mixins\A 13: --------------------------------------------------------------------------------------------------------------------- */\A 14: @import \"compass/css3\";\A 15: \A 16: /* =============================================================================\A 17: Sitewide variables\A 18: ========================================================================== */\A 19: $labelPadding: 1%;"; }

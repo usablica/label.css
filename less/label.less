@@ -1,0 +1,185 @@
+/*------------------------------------------------------------------------------------------------------------------------
+	Author: Sean Goresht
+	www: http://seangoresht.com/
+	github: https://github.com/srsgores
+	twitter: http://twitter.com/S.Goresht
+	
+	Licensed under the GNU Public License
+	
+	=============================================================================
+	Filename:  label.less
+	=============================================================================
+	Has label LESS helper mixins
+--------------------------------------------------------------------------------------------------------------------- */
+@import "mixins.less";
+
+/* =============================================================================
+Sitewide variables
+========================================================================== */
+@labelPadding: 1%;
+@labelBackgroundColour: rgba(242, 242, 242, 0.8);
+@labelFontWeight: 200;
+@labelMargin: 5%;
+@labelFontFamily: Arial;
+@labelWidth: 98%;
+@labelFontSize: 0.9em;
+@labelTransitionTime: 0.25s;
+
+/* =============================================================================
+Main styles
+========================================================================== */
+.label {
+	position: relative;
+	font-family: @labelFontFamily;
+	margin: auto;
+	.inline-block();
+	width: auto;
+	overflow: hidden;
+	&:after, &:before {
+		position: absolute;
+		height: auto;
+		width: @labelWidth;
+		display: block;
+		padding: @labelPadding;
+		background: @labelBackgroundColour;
+		content: attr(data-label);
+	}
+	&.rtl {
+		&:after, &:before {
+			text-align: right;
+			direction: rtl;
+			font-family: 'B yekan';
+			font-size: @labelFontSize;
+			font-weight: @labelFontWeight;
+		}
+	}
+	&.bottom {
+		&:after {
+			bottom: @labelPadding;
+		}
+	}
+	&.top:after, &.bottom:before, &.inside.middle:before {
+		display: none;
+	}
+	&.inside {
+		&.top {
+			&:before {
+				top: 0;
+			}
+			&.float {
+				&:before {
+					top: -1em;
+				}
+				&:hover {
+					&:before {
+						top: 0;
+					}
+				}
+			}
+		}
+		&.middle {
+			&:after {
+				top: 45%;
+			}
+			&.float {
+				&:after {
+					margin-top: 1.25em;
+				}
+				&:hover {
+					&:after {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+		&.left {
+			&:after, &:before {
+				float: left;
+				width: auto;
+				left: 0;
+			}
+		}
+		&.right {
+			&:after, &:before {
+				float: right;
+				width: auto;
+				right: 0;
+			}
+		}
+		&.bottom {
+			&.float {
+				&:after {
+					bottom: -0.3125em;
+				}
+				&:hover {
+					&:after {
+						bottom: 1%;
+					}
+				}
+			}
+		}
+	}
+	&.outside {
+		overflow: initial;
+		&:after {
+			position: relative;
+			background: none;
+			margin-bottom: -5%;
+		}
+		&:before {
+			position: relative;
+			background: none;
+			margin-top: -5%;
+		}
+		&.top {
+			&.float {
+				&:before {
+					top: 0.625em;
+				}
+				&:hover {
+					&:before {
+						top: 0;
+					}
+				}
+			}
+		}
+		&.bottom {
+			&.float {
+				&:after {
+					top: -0.625em;
+				}
+				&:hover {
+					&:after {
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+	&.fade {
+		&:before, &:after {
+			.transition(~"all @{labelTransitionTime} ease");
+			.opacity(0);
+			visibility: hidden;
+		}
+		&:hover {
+			&:before, &:after {
+				.opacity(100);
+				visibility: visible;
+			}
+		}
+	}
+	&.float {
+		&:after, &:before {
+			.transition(~"all @{labelTransitionTime} ease");
+			.opacity(0);
+			visibility: hidden;
+		}
+		&:hover {
+			&:after, &:before {
+				.opacity(100);
+				visibility: visible;
+			}
+		}
+	}
+}
