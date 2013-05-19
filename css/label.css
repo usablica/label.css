@@ -1,0 +1,153 @@
+/*------------------------------------------------------------------------------------------------------------------------
+	Author: Sean Goresht
+	www: http://seangoresht.com/
+	github: https://github.com/srsgores
+	twitter: http://twitter.com/S.Goresht
+	
+	Licensed under the GNU Public License
+	
+	=============================================================================
+	Filename:  label.less
+	=============================================================================
+	Has label SASS helper mixins
+--------------------------------------------------------------------------------------------------------------------- */
+/* =============================================================================
+Sitewide variables
+========================================================================== */
+/* =============================================================================
+Helpers
+========================================================================== */
+/* line 32, ../sass/label.scss */
+.label-no-top, .label.inside.top:before, .label.inside.top.float:hover:before, .label.inside.middle.float:hover:after, .label.outside.top.float:hover:before, .label.outside.bottom.float:hover:after {
+  top: 0;
+}
+
+/* line 35, ../sass/label.scss */
+.label-no-left, .label.inside.left:after, .label.inside.left:before {
+  left: 0;
+}
+
+/* line 38, ../sass/label.scss */
+.label-no-right, .label.inside.right:after, .label.inside.right:before {
+  right: 0;
+}
+
+/* line 42, ../sass/label.scss */
+.label-with-transition, .label.fade:before, .label.fade:after, .label.float:after, .label.float:before {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+/* line 46, ../sass/label.scss */
+.label-visible, .label.fade:hover:before, .label.fade:hover:after, .label.float:hover:after, .label.float:hover:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 51, ../sass/label.scss */
+.label-invisible, .label.fade:before, .label.fade:after, .label.float:after, .label.float:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =============================================================================
+Main styles
+========================================================================== */
+/* line 60, ../sass/label.scss */
+.label {
+  position: relative;
+  font-family: Arial;
+  margin: auto;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: auto;
+  overflow: hidden;
+}
+/* line 67, ../sass/label.scss */
+.label:after, .label:before {
+  position: absolute;
+  height: auto;
+  width: 98%;
+  display: block;
+  padding: 1%;
+  background: rgba(242, 242, 242, 0.8);
+  content: attr(data-label);
+}
+/* line 77, ../sass/label.scss */
+.label.rtl:after, .label.rtl:before {
+  text-align: right;
+  direction: rtl;
+  font-family: 'B yekan';
+  font-size: 0.9em;
+  font-weight: 200;
+}
+/* line 86, ../sass/label.scss */
+.label.bottom:after {
+  bottom: 1%;
+}
+/* line 90, ../sass/label.scss */
+.label.top:after, .label.bottom:before, .label.inside.middle:before {
+  display: none;
+}
+/* line 99, ../sass/label.scss */
+.label.inside.top.float:before {
+  top: -1em;
+}
+/* line 110, ../sass/label.scss */
+.label.inside.middle:after {
+  top: 45%;
+}
+/* line 114, ../sass/label.scss */
+.label.inside.middle.float:after {
+  margin-top: 1.25em;
+}
+/* line 125, ../sass/label.scss */
+.label.inside.left:after, .label.inside.left:before {
+  float: left;
+  width: auto;
+}
+/* line 132, ../sass/label.scss */
+.label.inside.right:after, .label.inside.right:before {
+  float: right;
+  width: auto;
+}
+/* line 140, ../sass/label.scss */
+.label.inside.bottom.float:after {
+  bottom: -0.3125em;
+}
+/* line 144, ../sass/label.scss */
+.label.inside.bottom.float:hover:after {
+  bottom: 1%;
+}
+/* line 151, ../sass/label.scss */
+.label.outside {
+  overflow: initial;
+}
+/* line 153, ../sass/label.scss */
+.label.outside:after {
+  position: relative;
+  background: none;
+  margin-bottom: -5%;
+}
+/* line 158, ../sass/label.scss */
+.label.outside:before {
+  position: relative;
+  background: none;
+  margin-top: -5%;
+}
+/* line 165, ../sass/label.scss */
+.label.outside.top.float:before {
+  top: 0.625em;
+}
+/* line 177, ../sass/label.scss */
+.label.outside.bottom.float:after {
+  top: -0.625em;
+}

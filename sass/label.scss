@@ -1,0 +1,210 @@
+/*------------------------------------------------------------------------------------------------------------------------
+	Author: Sean Goresht
+	www: http://seangoresht.com/
+	github: https://github.com/srsgores
+	twitter: http://twitter.com/S.Goresht
+	
+	Licensed under the GNU Public License
+	
+	=============================================================================
+	Filename:  label.less
+	=============================================================================
+	Has label SASS helper mixins
+--------------------------------------------------------------------------------------------------------------------- */
+@import "compass/css3";
+
+/* =============================================================================
+Sitewide variables
+========================================================================== */
+$labelPadding: 1%;
+$labelBackgroundColour: rgba(242, 242, 242, 0.8);
+$labelFontWeight: 200;
+$labelMargin: 5%;
+$labelFontFamily: Arial;
+$labelWidth: 98%;
+$labelFontSize: 0.9em;
+$labelTransitionTime: 0.25s;
+
+/* =============================================================================
+Helpers
+========================================================================== */
+
+.label-no-top {
+	top: 0;
+}
+.label-no-left {
+	left: 0
+}
+.label-no-right {
+	right: 0;
+}
+
+.label-with-transition {
+	@include transition(all $labelTransitionTime ease);
+}
+
+.label-visible {
+	@include opacity(0);
+	visibility: hidden;
+}
+
+.label-invisible {
+	@include opacity(1);
+	visibility: visible;
+}
+
+/* =============================================================================
+Main styles
+========================================================================== */
+
+.label {
+	position: relative;
+	font-family: $labelFontFamily;
+	margin: auto;
+	@include inline-block();
+	width: auto;
+	overflow: hidden;
+	&:after, &:before {
+		position: absolute;
+		height: auto;
+		width: $labelWidth;
+		display: block;
+		padding: $labelPadding;
+		background: $labelBackgroundColour;
+		content: attr(data-label);
+	}
+	&.rtl {
+		&:after, &:before {
+			text-align: right;
+			direction: rtl;
+			font-family: 'B yekan';
+			font-size: $labelFontSize;
+			font-weight: $labelFontWeight;
+		}
+	}
+	&.bottom {
+		&:after {
+			bottom: $labelPadding;
+		}
+	}
+	&.top:after, &.bottom:before, &.inside.middle:before {
+		display: none;
+	}
+	&.inside {
+		&.top {
+			&:before {
+				@extend .label-no-top;
+			}
+			&.float {
+				&:before {
+					top: -1em;
+				}
+				&:hover {
+					&:before {
+						@extend .label-no-top;
+					}
+				}
+			}
+		}
+		&.middle {
+			&:after {
+				top: 45%;
+			}
+			&.float {
+				&:after {
+					margin-top: 1.25em;
+				}
+				&:hover {
+					&:after {
+						@extend .label-no-top;
+					}
+				}
+			}
+		}
+		&.left {
+			&:after, &:before {
+				float: left;
+				width: auto;
+				@extend .label-no-left;
+			}
+		}
+		&.right {
+			&:after, &:before {
+				float: right;
+				width: auto;
+				@extend .label-no-right;
+			}
+		}
+		&.bottom {
+			&.float {
+				&:after {
+					bottom: -0.3125em;
+				}
+				&:hover {
+					&:after {
+						bottom: $labelPadding;
+					}
+				}
+			}
+		}
+	}
+	&.outside {
+		overflow: initial;
+		&:after {
+			position: relative;
+			background: none;
+			margin-bottom: -$labelMargin;
+		}
+		&:before {
+			position: relative;
+			background: none;
+			margin-top: -$labelMargin;
+		}
+		&.top {
+			&.float {
+				&:before {
+					top: 0.625em;
+				}
+				&:hover {
+					&:before {
+						@extend .label-no-top;
+					}
+				}
+			}
+		}
+		&.bottom {
+			&.float {
+				&:after {
+					top: -0.625em;
+				}
+				&:hover {
+					&:after {
+						@extend .label-no-top;
+					}
+				}
+			}
+		}
+	}
+	&.fade {
+		&:before, &:after {
+			@extend .label-with-transition;
+			@extend .label-invisible;
+		}
+		&:hover {
+			&:before, &:after {
+				@extend .label-visible;
+			}
+		}
+	}
+	&.float {
+		&:after, &:before {
+			@extend .label-with-transition;
+			@extend .label-invisible;
+		}
+		&:hover {
+			&:after, &:before {
+				@extend .label-visible;
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+/*------------------------------------------------------------------------------------------------------------------------
+	Author: Sean Goresht
+	www: http://seangoresht.com/
+	github: https://github.com/srsgores
+	twitter: http://twitter.com/S.Goresht
+	
+	Licensed under the GNU Public License
+	
+	=============================================================================
+	Filename:  mixins.less
+	=============================================================================
+	Just contains basic LESS mixins.  Feel free to use your own.
+--------------------------------------------------------------------------------------------------------------------- */
+// Opacity
+.opacity(@opacity){
+	opacity: @opacity / 100;
+	filter: ~"alpha(opacity=@{opacity})";
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{opacity})";
+}
+
+.inline-block(@alignment: auto) {
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: @alignment;
+	.ie7-inline-block();
+}
+
+// IE7 inline-block
+// ----------------
+.ie7-inline-block(){
+	*display: inline; /* IE7 inline-block hack */
+	*zoom: 1;
+	stop: being-broken;
+}
+
+.transition(...){
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-ms-transition: @arguments;
+	-o-transition: @arguments;
+	transition: @arguments;
+}
