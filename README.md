@@ -31,6 +31,12 @@ For example:
 ```html
     <figure class="label inside bottom fade" data-label="Just an easy and simple way to label everything.">
 ```
+## Versions:
+
+  **V.0.1.0** : First release of `label.css`. <br/>
+  **V.0.1.1** : Changes: <br/>
+        <span style="padding-left:1em;">**1)** Problems with bootstrap fixed.</span><br/>
+        <span style="padding-left:1em;">**2)** Less & Sass versions added. Thanks to [Sean Goresht](https://github.com/srsgores).</span> <br/>
 
 ## Author 
 
