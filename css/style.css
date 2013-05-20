@@ -176,6 +176,8 @@ section.middle {
 }
 .map svg {
     fill: #282828;
+    -ms-fill: #282828;
+    -o-fill: #282828;
     transition: all 0.2s ease;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -185,18 +187,25 @@ section.middle {
 .map a.out-top svg,
 .map a.out-bottom svg {
     fill: rgb(197, 197, 197);
+    -ms-fill: rgb(197, 197, 197);
+    -o-fill: rgb(197, 197, 197);
 }
 .map a:hover svg {
     fill: rgba(235, 50, 39, 1);
+    -ms-fill: rgba(235, 50, 39, 1);
+    -o-fill: rgba(235, 50, 39, 1);
 }
 .map a.active svg {
     fill: #2e75b6;
+    -ms-fill: #2e75b6;
+    -o-fill: #2e75b6;
 }
 .map a {
-    height: 30px;
+    height: 40px;
     float: left;
     cursor: pointer;
     text-align: center;
+    overflow: hidden;
 }
 .map a span {
     text-align: left;
@@ -207,9 +216,11 @@ section.middle {
 }
 .map a.out-top {
     margin-top: -30px;
+    height: 30px;
 }
 .map a.out-bottom {
-    margin-top: 23px;
+    margin-top: 15px;
+    height: 30px;
 }
 .map a.top {
     width: 180px;
@@ -218,12 +229,12 @@ section.middle {
 .map a.middle {
     width: 180px;
     margin: 5px;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 .map a.bottom {
     width: 180px; 
     margin: 5px;
-    margin-top: 25px; 
+    margin-top: 20px;
 }
 .map a.left,
 .map a.right {
