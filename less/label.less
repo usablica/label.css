@@ -1,10 +1,22 @@
 /*------------------------------------------------------------------------------------------------------------------------
-	Author: Sean Goresht
-	www: http://seangoresht.com/
-	github: https://github.com/srsgores
-	twitter: http://twitter.com/S.Goresht
+   Label.css
+
+   Developed By Hosein Emrani:
+
+    | Twitter: (@hoseiin)
+    | Facebook: (fb.com/hosein.emrani)
+    | Mail: hoseiin[at]outlook[dot]com
+    
+   Github: http://github.com/usablica/label.css
+       
+   With love in usablica, Tehran. 
+    
+   Less And Sass versions by: Sean Goresht
+	    |http://seangoresht.com/
+	    |github: https://github.com/srsgores
+	    |twitter: http://twitter.com/S.Goresht
 	
-	Licensed under the GNU Public License
+	Licensed under the GNU Public License.
 	
 	=============================================================================
 	Filename:  label.less
@@ -24,15 +36,17 @@ Sitewide variables
 @labelWidth: 98%;
 @labelFontSize: 0.9em;
 @labelTransitionTime: 0.25s;
+@intial: intial !important;
 
 /* =============================================================================
 Main styles
 ========================================================================== */
-.label {
+.label[data-label] {
 	position: relative;
 	font-family: @labelFontFamily;
 	margin: auto;
 	.inline-block();
+    .bootstrap-initial();
 	width: auto;
 	overflow: hidden;
 	&:after, &:before {
@@ -44,6 +58,9 @@ Main styles
 		background: @labelBackgroundColour;
 		content: attr(data-label);
 	}
+    &.fade {
+        opacity: 1 !important;
+    }
 	&.rtl {
 		&:after, &:before {
 			text-align: right;

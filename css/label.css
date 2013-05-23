@@ -37,13 +37,13 @@
   background-color: initial !important;
   border-radius: initial !important;
 }
+.label[data-label].fade {
+    opacity: 1 !important;
+}
 
 /* Label RTL Support */
 .label[data-label].rtl:after,
-.label[data-label].rtl:before {
-    text-align: right;
-    direction: rtl;
-}
+.label[data-label].rtl:before,
 /* Label After Design */
 .label[data-label]:after,
 .label[data-label]:before { 
@@ -60,9 +60,7 @@
     content:attr(data-label);
     
 }
-.label[data-label] span[data-label] {
-    content: attr(data-label);
-}
+
 
 /* Now we just wanna choose the position of the label with class names. */
 

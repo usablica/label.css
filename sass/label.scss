@@ -1,16 +1,29 @@
 /*------------------------------------------------------------------------------------------------------------------------
-	Author: Sean Goresht
-	www: http://seangoresht.com/
-	github: https://github.com/srsgores
-	twitter: http://twitter.com/S.Goresht
+   Label.css
+
+   Developed By Hosein Emrani:
+
+    | Twitter: (@hoseiin)
+    | Facebook: (fb.com/hosein.emrani)
+    | Mail: hoseiin[at]outlook[dot]com
+    
+   Github: http://github.com/usablica/label.css
+       
+   With love in usablica, Tehran. 
+    
+   Less And Sass versions by: Sean Goresht
+	    |http://seangoresht.com/
+	    |github: https://github.com/srsgores
+	    |twitter: http://twitter.com/S.Goresht
 	
-	Licensed under the GNU Public License
+	Licensed under the GNU Public License.
 	
 	=============================================================================
-	Filename:  label.less
+	Filename:  label.scss
 	=============================================================================
 	Has label SASS helper mixins
 --------------------------------------------------------------------------------------------------------------------- */
+
 @import "compass/css3";
 
 /* =============================================================================
@@ -18,11 +31,9 @@ Sitewide variables
 ========================================================================== */
 $labelPadding: 1%;
 $labelBackgroundColour: rgba(242, 242, 242, 0.8);
-$labelFontWeight: 200;
 $labelMargin: 5%;
 $labelFontFamily: Arial;
 $labelWidth: 98%;
-$labelFontSize: 0.9em;
 $labelTransitionTime: 0.25s;
 
 /* =============================================================================
@@ -62,6 +73,7 @@ Main styles
 	font-family: $labelFontFamily;
 	margin: auto;
 	@include inline-block();
+    @include bootstrap-initial();
 	width: auto;
 	overflow: hidden;
 	&:after, &:before {
@@ -73,13 +85,13 @@ Main styles
 		background: $labelBackgroundColour;
 		content: attr(data-label);
 	}
+    &.fade {
+        opacity: 1 !important;
+    }
 	&.rtl {
 		&:after, &:before {
 			text-align: right;
 			direction: rtl;
-			font-family: 'B yekan';
-			font-size: $labelFontSize;
-			font-weight: $labelFontWeight;
 		}
 	}
 	&.bottom {

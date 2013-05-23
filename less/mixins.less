@@ -1,15 +1,27 @@
 /*------------------------------------------------------------------------------------------------------------------------
-	Author: Sean Goresht
-	www: http://seangoresht.com/
-	github: https://github.com/srsgores
-	twitter: http://twitter.com/S.Goresht
+   Label.css
+
+   Developed By Hosein Emrani:
+
+    | Twitter: (@hoseiin)
+    | Facebook: (fb.com/hosein.emrani)
+    | Mail: hoseiin[at]outlook[dot]com
+    
+   Github: http://github.com/usablica/label.css
+       
+   With love in usablica, Tehran. 
+    
+   Less And Sass versions by: Sean Goresht
+	    |http://seangoresht.com/
+	    |github: https://github.com/srsgores
+	    |twitter: http://twitter.com/S.Goresht
 	
-	Licensed under the GNU Public License
+	Licensed under the GNU Public License.
 	
 	=============================================================================
-	Filename:  mixins.less
+	Filename:  label.less
 	=============================================================================
-	Just contains basic LESS mixins.  Feel free to use your own.
+	Has label LESS helper mixins
 --------------------------------------------------------------------------------------------------------------------- */
 // Opacity
 .opacity(@opacity){
@@ -24,7 +36,20 @@
 	vertical-align: @alignment;
 	.ie7-inline-block();
 }
-
+/* bootstrap hack */
+.bootstrap-initial(){
+  padding:initial !important;
+  font-size:initial !important;
+  font-weight: initial !important;
+  line-height: initial !important;
+  color: initial !important;
+  text-shadow:initial !important;
+  white-space:initial !important;
+  vertical-align: initial !important;
+  background-color: initial !important;
+  border-radius: initial !important;
+}
+/*-----*/
 // IE7 inline-block
 // ----------------
 .ie7-inline-block(){

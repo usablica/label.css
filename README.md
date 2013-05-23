@@ -31,6 +31,11 @@ For example:
 ```html
     <figure class="label inside bottom fade" data-label="Just an easy and simple way to label everything.">
 ```
+
+## RTL Supports
+
+Switch to `RightToLeft` languages by adding class `rtl`.
+
 ## Versions:
 
   **V.0.1.0** : First release of `label.css`. <br/>
