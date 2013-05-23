@@ -41,6 +41,11 @@
     opacity: 1 !important;
 }
 
+.label[data-label].fade {
+  opacity: initial !important
+  transition: initial !important
+}
+
 /* Label RTL Support */
 .label[data-label].rtl:after,
 .label[data-label].rtl:before,
