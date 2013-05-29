@@ -54,7 +54,6 @@
     display: block;
     
     padding:1%;
-    display: block;
     background:rgba(242, 242, 242, 0.80);
     
     content:attr(data-label);
